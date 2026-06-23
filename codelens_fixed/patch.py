@@ -1,0 +1,5 @@
+content = open('app.py', encoding='utf-8').read()
+content = content.replace('}).encode("utf-8")', '}, ensure_ascii=False).encode("utf-8")')
+content = content.replace('"Content-Type": "application/json",', '"Content-Type": "application/json; charset=utf-8",')
+open('app.py', 'w', encoding='utf-8').write(content)
+print('OK - файл исправлен')

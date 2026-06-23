@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  codelens:
+    build: .
+    ports:
+      - "8082:8082"
+    volumes:
+      # Персистентное хранение ChromaDB и загруженных репозиториев
+      - chroma_data:/app/chroma_db
+      - extra_repos:/app/extra_repos
+    environment:
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+
+volumes:
+  chroma_data:
+  extra_repos:

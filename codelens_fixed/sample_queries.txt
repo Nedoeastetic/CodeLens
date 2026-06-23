@@ -1,0 +1,20 @@
+как получить список всех упражнений с пагинацией?
+где хранится секретный ключ для подписи токенов?
+как добавить упражнение в тренировочный блок?
+how to create a new training plan?
+как удалить пользователя из системы?
+what fields are required to register a new user?
+как проверить, активен ли пользователь?
+where is the database connection URL constructed?
+как обновить данные тренировочного плана?
+how to get all training plans for the current user?
+какой алгоритм шифрования паролей используется в проекте?
+how does the project handle duplicate exercise names on creation?
+как в проекте реализована логика удаления упражнения из тренировочного блока, если его там нет?
+как проект управляет транзакциями базы данных при создании и обновлении записей одновременно?
+what happens when a superuser tries to delete their own account?
+как устроена цепочка зависимостей при проверке прав суперпользователя на уровне роутера?
+как реализовано кеширование ответов API в этом проекте?
+does the project support OAuth2 social login via Google or GitHub?
+как настроена поддержка WebSocket-соединений в проекте?
+is there any rate limiting or throttling mechanism implemented?

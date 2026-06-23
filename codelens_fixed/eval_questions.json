@@ -1,0 +1,167 @@
+[
+  {
+    "question_id": "q_01",
+    "query": "как в проекте создаётся токен доступа и какой срок его жизни?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/security.py:create_access_token:12",
+      "gymhero/config.py:Settings:11"
+    ],
+    "difficulty": "easy",
+    "category": "auth"
+  },
+  {
+    "question_id": "q_02",
+    "query": "how does the project verify a JWT token from an incoming request?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/api/dependencies.py:get_token:35",
+      "gymhero/api/dependencies.py:get_current_user:58",
+      "gymhero/exceptions.py:_get_credential_exception:5"
+    ],
+    "difficulty": "hard",
+    "category": "auth"
+  },
+  {
+    "question_id": "q_03",
+    "query": "где в проекте проверяется, является ли пользователь суперпользователем?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/crud/user.py:UserCRUDRepository.is_super_user:25",
+      "gymhero/api/dependencies.py:get_current_superuser:105"
+    ],
+    "difficulty": "easy",
+    "category": "auth"
+  },
+  {
+    "question_id": "q_04",
+    "query": "how does the project create a new account and what response is sent if the email is taken?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/api/routes/auth.py:register:55",
+      "gymhero/crud/user.py:UserCRUDRepository.get_user_by_email:11"
+    ],
+    "difficulty": "medium",
+    "category": "api"
+  },
+  {
+    "question_id": "q_05",
+    "query": "как в проекте хранится и проверяется пароль пользователя при входе?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/security.py:verify_password:38",
+      "gymhero/crud/user.py:UserCRUDRepository.authenticate_user:67"
+    ],
+    "difficulty": "medium",
+    "category": "auth"
+  },
+  {
+    "question_id": "q_06",
+    "query": "what database session management strategy does the project use for FastAPI endpoints?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/database/db.py:get_db:11",
+      "gymhero/database/session.py:get_local_session:42"
+    ],
+    "difficulty": "hard",
+    "category": "db"
+  },
+  {
+    "question_id": "q_07",
+    "query": "как формируется строка подключения к PostgreSQL из настроек приложения?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/database/session.py:build_sqlalchemy_database_url_from_settings:8"
+    ],
+    "difficulty": "easy",
+    "category": "config"
+  },
+  {
+    "question_id": "q_08",
+    "query": "how does the project load configuration depending on the runtime environment?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/config.py:get_settings:65",
+      "gymhero/config.py:Settings:11",
+      "gymhero/config.py:LocalDevSettings:58"
+    ],
+    "difficulty": "medium",
+    "category": "config"
+  },
+  {
+    "question_id": "q_09",
+    "query": "как базовый репозиторий реализует создание записи с привязкой к владельцу?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/crud/base.py:CRUDRepository.create_with_owner:162"
+    ],
+    "difficulty": "easy",
+    "category": "db"
+  },
+  {
+    "question_id": "q_10",
+    "query": "what error response is returned when credentials cannot be validated and what HTTP status code is used?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/exceptions.py:_get_credential_exception:5"
+    ],
+    "difficulty": "easy",
+    "category": "errors"
+  },
+  {
+    "question_id": "q_11",
+    "query": "как проверяется уникальность плана тренировок при его создании?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/api/routes/training_plan.py:create_training_plan:192",
+      "gymhero/models/training_plan.py:TrainingPlan:23",
+      "gymhero/crud/base.py:CRUDRepository.get_one:33"
+    ],
+    "difficulty": "medium",
+    "category": "business_logic"
+  },
+  {
+    "question_id": "q_12",
+    "query": "how does the project prevent adding the same training unit to a plan twice?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/crud/training_plan.py:TrainingPlanCRUD.add_training_unit_to_training_plan:11",
+      "gymhero/api/routes/training_plan.py:add_training_unit_to_training_plan:325"
+    ],
+    "difficulty": "medium",
+    "category": "business_logic"
+  },
+  {
+    "question_id": "q_13",
+    "query": "какие поля схемы обязательны при создании упражнения и как задаётся ограничение на их значения?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/schemas/exercise.py:ExerciseBase:12"
+    ],
+    "difficulty": "medium",
+    "category": "validation"
+  },
+  {
+    "question_id": "q_14",
+    "query": "how does the project enforce that only the owner or a superuser can delete a training plan?",
+    "language": "en",
+    "correct_chunk_ids": [
+      "gymhero/api/routes/training_plan.py:delete_training_plan:229",
+      "gymhero/api/dependencies.py:get_current_active_user:82",
+      "gymhero/crud/user.py:UserCRUDRepository.is_super_user:25"
+    ],
+    "difficulty": "hard",
+    "category": "api"
+  },
+  {
+    "question_id": "q_15",
+    "query": "как в проекте реализована пагинация запросов к базе данных и где задаются параметры по умолчанию?",
+    "language": "ru",
+    "correct_chunk_ids": [
+      "gymhero/api/dependencies.py:get_pagination_params:19",
+      "gymhero/crud/base.py:CRUDRepository.get_many:53"
+    ],
+    "difficulty": "hard",
+    "category": "db"
+  }
+]

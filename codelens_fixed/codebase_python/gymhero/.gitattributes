@@ -1,0 +1,12 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Denote all files that are truly binary and should not be modified.
+*.png binary
+*.jpg binary
+
+*.h text=auto
+*.cpp text=auto
+*.txt text=auto
+*.html linguist-detectable=false
+
