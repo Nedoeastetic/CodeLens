@@ -169,6 +169,7 @@ python score.py --predictions results.json --questions eval_questions.json
 
 На странице «🔍 Поиск» → «🤖 LLM-режим».
 
+- **Ollama** API-ключ →  `open api key`
 - **Qwen** API-ключ →  `HuggingFace`
 
 ---
